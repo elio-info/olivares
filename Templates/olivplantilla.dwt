@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>The Olive Land Farm</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="../utls/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../utls/css/carousel.css">
+<link href="../utls/css/mycss.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container">
+<!-- inicio .header -->
+  <div class="header">
+   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="bd-placeholder-img" width="100%" height="100%"  aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" src="../utls/imgs/IMG-20231015-WA0039.jpg"><rect width="100%" height="100%" /></img>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Villa de historia.</h1>
+            <p>Lugar para disfrutar de una vista en casa tradicional.</p>            
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img" width="100%" height="100%" src="../utls/imgs/IMG-20230820-WA0042.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" /></img>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Cuidando de lo principal.</h1>
+            <p>Nos distinguen los Olivos. Su cuidado y preservacion nos importa.</p>           
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img" width="100%" height="100%" src="../utls/imgs/IMG-20231206-WA0022.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" /></img>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>El ganado cumple su rol.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </div>  <!-- fin .header carousel -->
+  <!-- inicio header menu-->
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills" id="menuarriba">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      </ul>
+      </header>
+<!-- TemplateBeginEditable name="CentroEditRegion" -->
+      <div>
+      <ul class="nav nav-pills" id="menuarriba">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page"></a>_</li>
+        <li class="nav-item"><a href="#" class="nav-link"></a>_</li>
+        <li class="nav-item"><a href="#" class="nav-link"></a>_</li>
+        <li class="nav-item"><a href="#" class="nav-link"></a>_</li>
+        <li class="nav-item"><a href="#" class="nav-link"></a>_</li>
+      </ul>
+    </div>
+  </div>
+  <!-- fin header menu completo-->
+  <div class="content">
+    <h1>Instrucciones</h1>
+    <p>Tenga en cuenta que la CSS para estos diseños cuenta con numerosos comentarios. Si realiza la mayor parte de su trabajo en la vista Diseño, eche un vistazo al código para obtener sugerencias sobre cómo trabajar con la CSS para diseños flotantes. Puede quitar estos comentarios antes de lanzar el sitio. Para obtener más información sobre las técnicas usadas en estos diseños CSS, lea este artículo en el Centro de desarrolladores de Adobe: <a href="http://www.adobe.com/go/adc_css_layouts">http://www.adobe.com/go/adc_css_layouts</a>.</p>
+    <h2>Diseño</h2>
+    <p>Dado que éste es un diseño de una sola columna, el .content no flota. </p>
+    <h3>Sustitución de logotipo</h3>
+    <p>Se ha utilizado un marcador de posición de imagen en el .header de este diseño, en el que lo más probable es que desee colocar un logotipo. Se recomienda quitar el marcador de posición y reemplazarlo por su propio logotipo vinculado. </p>
+    <p> Tenga en cuenta que si utiliza el inspector de propiedades para navegar hasta la imagen de su logotipo empleando el campo Origen (en lugar de quitar y reemplazar el marcador de posición), deberá quitar el fondo en línea y mostrar las propiedades. Estos estilos en línea sólo se utilizan para hacer que el marcador de posición del logotipo aparezca en los navegadores para fines de demostración. </p>
+    <p>Para quitar los estilos en línea, asegúrese de que el panel Estilos CSS está configurado como Actual. Seleccione la imagen y, en la sección Propiedades del panel Estilos CSS, haga clic con el botón derecho del ratón y elimine las propiedades de visualización y de fondo. (Por supuesto que siempre podrá ir directamente al código y eliminar allí los estilos en línea de la imagen o el marcador de posición.)</p>
+    <!-- end .content -->
+  </div>
+  <!-- TemplateEndEditable -->
+  <div class="footer">
+    <p>Pie de página</p>
+  <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+<script type="text/javascript" src="../utls/js/bootstrap.bundle.min.js"></script>
+
+</html>
