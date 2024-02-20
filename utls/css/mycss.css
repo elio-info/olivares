@@ -1,9 +1,20 @@
 @charset "utf-8";
 /* CSS Document */
-
+:root{
+	--spacing-01: 4px;
+    --spacing-02: 8px;
+    --spacing-03: 16px;
+    --spacing-04: 24px;
+    --spacing-05: 32px;
+    --spacing-06: 48px;
+    --spacing-07: 56px;
+    --spacing-08: 64px;
+    --spacing-09: 80px;
+    --spacing-10: 96px;
+}
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background-color: #4E5869;
+	background-color: #85a824;
 	margin: 0;
 	padding: 0;
 	color: #000;
@@ -71,7 +82,9 @@ a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usu
 /* ~~ El pie de página ~~ */
 .footer {
 	padding: 10px 0;
-	background-color: #6F7D94;
+	background-color: #85a824;
+	color: #FFF;
+	align-items: center;
 }
 
 /* ~~ clases float/clear varias ~~ */
@@ -88,4 +101,64 @@ a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usu
 	height:0;
 	font-size: 1px;
 	line-height: 0px;
+}
+
+
+.centro-info{
+	display: block;
+    margin: 0 auto;
+    padding-top: var(--spacing-04);
+	min-height: 50vh;
+}
+@media (min-width: 768px) {
+    .centro-info {
+        padding-top:var(--spacing-04);
+    }
+}
+@media (min-width: 1024px) {
+		.centro-info {
+			padding-top:var(--spacing-05)
+	}
+}
+
+.Oz {
+    box-sizing: border-box;
+}
+
+.dividiendo-grid{
+	--webkit-align-items: flex-start;
+    align-items: flex-start;
+    --webkit-column-gap: var(--spacing-03);
+    column-gap: var(--spacing-03);
+    grid-template-columns: 4fr 8fr;
+    grid-template-rows: auto;
+	display: inline;
+}
+.info-red{
+	border-end-end-radius: 8px;
+    border-end-start-radius: 8px;
+    border-start-end-radius: 8px;
+    border-start-start-radius: 8px;
+	border-radius: 1px;
+}
+
+
+.info-flex{
+	display: inline;
+	height: 100%;
+	position: relative;
+}
+@media (min-width: 768px) {
+    .Yzkgq {
+        display:inline;
+        margin-left: var(--spacing-03);
+        margin-top: 0
+    }
+}
+
+.derecha-flex {
+	align-items:  flex-start;
+	column-gap: 16px;
+	grid-template-columns: 4fr 8fr;
+	grid-template-rows: auto;
 }
