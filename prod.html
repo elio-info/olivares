@@ -94,9 +94,9 @@
           <span class="fs-4">Olive Land Farms</span>
         </div>
         <ul class="nav nav-pills" id="menuarriba">          
-          <li class="nav-item"><a href="#" class="nav-link active">Qu&iacute;enes somos</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Qu&iacute;enes somos</a></li>
           <li class="nav-item"><a href="ciinv.html" class="nav-link">Ciencia e Investigación </a></li>
-          <li class="nav-item"><a href="prod.html" class="nav-link">Producción </a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">Producción </a></li>
           <li class="nav-item"><a href="inform.html" class="nav-link">Informatizados </a></li>
           <li class="nav-item"><a href="actvds.html" class="nav-link">Actividades </a></li>
         </ul>
@@ -105,22 +105,72 @@
 
     <div class="content">      
         <div class="row" id="centro info">
-          <div class="col-4 " >
-            <div class="border rounded-lg card">
-              <div class="card-body">
-                <h5 class="card-title titulo-olivo" >Acerca de</h5>
-                <p class="card-text info-justify">
-                  “Olive Land Farms" es una finca con una extensión de 5 hectáreas (12,5 acres),
-                  enclavada en “8470” ReidRd, perteneciente al pequeño poblado de Hastings, al Norte del Estado de la
-                  Florida. Cuenta con diversas variedades de olivo cultivados por métodos ecológicos. Aquí podrás
-                  encontrar gran diversidad de plantas como palmas, cedro, pino, limonero, arce rojo, magnolias, encino
-                  entre otras, además puedes disfrutar de la presencia de animales, incluyendoel rakkún, conejos,
-                  ardillas, que adornan el paisaje. Esta finca es un rincón privilegiado en cuanto a belleza
-                  paisajística y protección medioambiental.
-                  ¡Anímate a visitarnos…No te lo pierdas!</p>                
-              </div> 
+          <div class="col-4 " ><!-- navega de col 4, cosa del lado -->
+            <div class="row" id="body-row">
+              <!-- Sidebar -->
+              <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+                  <!-- Bootstrap List Group -->
+                  <ul class="list-group">
+                      <!-- Separator with title Plantaciones-->
+                      <li class="titulo-olivo list-group-item sidebar-separator-title d-flex align-items-center menu-collapsed">
+                          <h4>Plantaciones</h4>
+                      </li>
+                      <!-- /END Separator -->
+                      <!-- Menu with submenu -->
+                      <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-olive list-group-item list-group-item-action flex-column align-items-start">
+                          <div class="d-flex w-100 justify-content-start align-items-center">
+                              <span class="fa fa-dashboard fa-fw mr-3"></span> 
+                              <span class="menu-collapsed">Olivos</span>
+                              <span class="submenu-icon ml-auto"></span>
+                          </div>
+                      </a>                                 
+                     <!-- Fin de Separator with title Plantaciones-->
+                      <!-- Separator with title Ganaderia-->
+                      <li class="titulo-olivo list-group-item sidebar-separator-title  d-flex align-items-center menu-collapsed">
+                          <h4>Ganadería</h4>
+                      </li>
+                      <!-- /END Separator -->
+                      <a href="#" class="bg-olive list-group-item list-group-item-action">
+                          <div class="d-flex w-100 justify-content-start align-items-center">
+                              <span class="fa fa-calendar fa-fw mr-3"></span>
+                              <span class="menu-collapsed">Cerdos</span>
+                          </div>
+                      </a>
+                      <a href="#" class="bg-olive list-group-item list-group-item-action">
+                          <div class="d-flex w-100 justify-content-start align-items-center">
+                              <span class="fa fa-envelope-o fa-fw mr-3"></span>
+                              <span class="menu-collapsed">Vacunos </span>
+                          </div>
+                      </a>
+                      <a href="#" class="bg-olive list-group-item list-group-item-action">
+                          <div class="d-flex w-100 justify-content-start align-items-center">
+                              <span class="fa fa-envelope-o fa-fw mr-3"></span>
+                              <span class="menu-collapsed">Ovino-Caprino </span>
+                          </div>
+                      </a>
+                       <!--Fin de Separator with title Ganaderia-->
+                      <!-- Separator without title Aves-->
+                      <li class="titulo-olivo list-group-item sidebar-separator menu-collapsed">
+                        <h4>Aves</h4></li>            
+                      <!-- /END Separator -->
+                      <a href="#" class="bg-olive list-group-item list-group-item-action">
+                          <div class="d-flex w-100 justify-content-start align-items-center">
+                              <span class="fa fa-question fa-fw mr-3"></span>
+                              <span class="menu-collapsed">Pollos</span>
+                          </div>
+                      </a>
+                      <a href="#" data-toggle="sidebar-colapse" class="bg-olive list-group-item list-group-item-action d-flex align-items-center">
+                          <div class="d-flex w-100 justify-content-start align-items-center">
+                              <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+                              <span id="collapse-text" class="menu-collapsed">Gansos</span>
+                          </div>
+                      </a> 
+                      <!-- Separator without title Aves-->                       
+                  </ul><!-- List Group END-->
+              </div><!-- sidebar-container END -->          
               
-            </div>            
+              
+          </div><!-- body-row END -->           
           </div><!-- fin de col 4, cosa del lado -->
           <!-- fotos de la finca -->
           <div class="col-8 border rounded-lg" >
@@ -128,19 +178,19 @@
           <div class="p-2 d-flex justify-content-center">
             <div class="ecommerce-gallery"  >
               <div class="row" id="galeria">                
-                    <img src="utls/imgs/local/IMG-05.jpg" id="galeriaImg" alt="Olive Farm" class="imagenScala80 " >                    
+                    <img src="utls/imgs/IMG-05.jpg" id="galeriaImg" alt="Olive Farm" class="imagenScala80 " >                    
               </div><!-- row fin de mostrar -->
               <!-- seccion de thumbs -->
             <div id="thumbsSeccion" class="row justify-content-center">
-              <img src="utls/imgs/local/IMG-05.jpg" alt="ads" class="imagenScala20 active" id="05" onclick="mostrarEnCarrusel('05','local');">
-              <img src="utls/imgs/local/IMG-06.jpg" alt="asda" class="imagenScala20" id="06" onclick="mostrarEnCarrusel('06','local');">
-              <img src="utls/imgs/local/IMG-10.jpg" alt="asda" class="imagenScala20" id="10" onclick="mostrarEnCarrusel('10','local');">
-              <img src="utls/imgs/local/IMG-21.jpg" alt="ads" class="imagenScala20 " id="21" onclick="mostrarEnCarrusel('21','local');">
-              <img src="utls/imgs/local/IMG-22.jpg" alt="asda" class="imagenScala20" id="22" onclick="mostrarEnCarrusel('22','local');">
-              <img src="utls/imgs/local/IMG-39.jpg" alt="asda" class="imagenScala20" id="39" onclick="mostrarEnCarrusel('39','local');">
-              <img src="utls/imgs/local/IMG-41.jpg" alt="ads" class="imagenScala20 " id="41" onclick="mostrarEnCarrusel('41','local');">
-              <img src="utls/imgs/local/IMG-42.jpg" alt="asda" class="imagenScala20" id="42" onclick="mostrarEnCarrusel('42','local');">
-              <img src="utls/imgs/local/IMG-47.jpg" alt="asda" class="imagenScala20" id="47" onclick="mostrarEnCarrusel('47','local');">
+              <img src="utls/imgs/IMG-05.jpg" alt="ads" class="imagenScala20 active" id="05" onclick="mostrarEnCarrusel('05');">
+              <img src="utls/imgs/IMG-06.jpg" alt="asda" class="imagenScala20" id="06" onclick="mostrarEnCarrusel('06');">
+              <img src="utls/imgs/IMG-10.jpg" alt="asda" class="imagenScala20" id="10" onclick="mostrarEnCarrusel('10');">
+              <img src="utls/imgs/IMG-21.jpg" alt="ads" class="imagenScala20 " id="21" onclick="mostrarEnCarrusel('21');">
+              <img src="utls/imgs/IMG-22.jpg" alt="asda" class="imagenScala20" id="22" onclick="mostrarEnCarrusel('22');">
+              <img src="utls/imgs/IMG-39.jpg" alt="asda" class="imagenScala20" id="39" onclick="mostrarEnCarrusel('39');">
+              <img src="utls/imgs/IMG-41.jpg" alt="ads" class="imagenScala20 " id="41" onclick="mostrarEnCarrusel('41');">
+              <img src="utls/imgs/IMG-42.jpg" alt="asda" class="imagenScala20" id="42" onclick="mostrarEnCarrusel('42');">
+              <img src="utls/imgs/IMG-47.jpg" alt="asda" class="imagenScala20" id="47" onclick="mostrarEnCarrusel('47');">
             </div>
             <!-- fin de seccion de thumbs -->
             </div>    

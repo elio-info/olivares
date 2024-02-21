@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/mycss.css" rel="stylesheet" type="text/css">
+ 
+</head>
+<body onload="mostrarEnCarrusel('05');">
+    <section class="p-4 d-flex justify-content-center w-100">
+        <div class="ecommerce-gallery" id="galeria" data-mdb-ecommerce-gallery-init="">
+          <div class="row">
+            <div >
+                <img src="imgs/IMG-05.jpg" id="galeriaImg" alt="Olive Farm" class="imagenScala80" >            
+            </div>            
+          </div><!-- row fin de mostrar -->
+            <!-- seccion de thumbs -->
+        <div id="thumbsSeccion" class="row">
+            <picture><img src="imgs/IMG-05.jpg" alt="ads" class="imagenScala20 active" id="05" onclick="mostrarEnCarrusel('05');"></picture>
+            <picture><img src="imgs/IMG-06.jpg" alt="asda" class="imagenScala20" id="06" onclick="mostrarEnCarrusel('06');"></picture>
+            <picture></picture><img src="imgs/IMG-10.jpg" alt="asda" class="imagenScala20" id="10" onclick="mostrarEnCarrusel('10');"></picture>
+        </div>
+        <!-- fin de seccion de thumbs -->
+          </div>
+        </div>
+      </section>
+</body>
+<script>
+    let imgActiva="05";
+    function mostrarEnCarrusel(params) {
+      document.getElementById("galeriaImg").src="imgs/IMG-"+params+".jpg" ;
+      let thumbsI=document.getElementsByTagName("picture");
+      for (const  elt of thumbsI)  {
+        let laimg=elt.firstChild
+        laimg.class=laimg.id=params?"imagenScala20 active":"imagenScala20"
+      }
+    }
+</script>
+</html>

@@ -11,7 +11,11 @@
     --spacing-08: 64px;
     --spacing-09: 80px;
     --spacing-10: 96px;
+	--olivo:#85a824;
+	--olivo-claro:#d9f884;
 }
+
+
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #85a824;
@@ -19,6 +23,49 @@ body {
 	padding: 0;
 	color: #000;
 }
+.info-justify{
+	text-align: justify;
+}
+
+.imagenScala20 {
+	height: 60px;
+	width: 90px;
+	opacity: 0.5;
+	padding-left: 0;
+	padding-right: 0;
+}
+.active{ opacity: 1;}
+.imagenScala20:hover{
+	opacity: 1;height: 60px;
+	width: 90px;
+}
+.imagenScala80 {
+	height: 25rem;
+	width: 70rem;
+}
+.imgCa{
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+    position: relative
+
+}
+.titulo-olivo{
+	background-color: var(--olivo) ;
+	padding-block: 20px ;
+}
+
+/* navegacion de slides */
+
+/*/ Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+*/
+.bg-olive {  
+  background-color: var(--olivo-claro); 
+}
+
+/* fin navegacion de slides */
 
 /* ~~ Selectores de elemento/etiqueta ~~ */
 ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
@@ -102,7 +149,9 @@ a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usu
 	font-size: 1px;
 	line-height: 0px;
 }
-
+.rounded-lg {
+    border-radius: 0.6rem!important;
+}
 
 .centro-info{
 	display: block;
