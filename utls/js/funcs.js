@@ -10,3 +10,15 @@ function mostrarEnCarrusel(params,lugar) {
     }
 }
 
+function toogleVw(dondeTxt,donde) {
+  let lugar=document.getElementById(donde)
+  let lugarTxt=document.getElementById(dondeTxt)
+  if (lugarTxt.innerHTML=='Ampliar...') {
+    lugar.style.display='block'
+    lugarTxt.innerHTML='Ocultar...'
+  } else {
+    lugar.style.display='none'
+    lugarTxt.innerHTML='Ampliar...'
+  }
+}
+
