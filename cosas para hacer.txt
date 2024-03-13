@@ -1,0 +1,50 @@
+<ul class="list-group">
+                      <!-- Separator with title Plantaciones-->
+                      <li class="titulo-olivo list-group-item sidebar-separator-title d-flex align-items-center menu-collapsed">
+                          <h4>Olivos</h4>
+                      </li>
+                      <!-- /END Separator -->
+                      <!-- Menu with submenu -->
+                      <a href="#producto" class="bg-olive list-group-item list-group-item-action flex-column align-items-start" onclick="cambioProdcc('olivo');">
+                          <div class="d-flex w-100 justify-content-start align-items-center">
+                              <span class="menu-collapsed">Olivos</span>                              
+                          </div>
+                      </a>                                 
+                     <!-- Fin de Separator with title Plantaciones-->
+                      <!-- Separator with title Ganaderia-->
+                      <li class="titulo-olivo list-group-item sidebar-separator-title  d-flex align-items-center menu-collapsed">
+                          <h4>Ganadería</h4>
+                      </li>
+                      <!-- /END Separator -->
+                      <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('Cerdos');">
+                          <div class="d-flex justify-content-start ">
+                              <span class="menu-collapsed">Cerdos</span>
+                          </div>
+                      </a>
+                      <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('Vacunos');">
+                          <div class="d-flex w-100 justify-content-start align-items-center">
+                              <span >Vacunos </span>
+                          </div>
+                      </a>
+                      <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('Ovino-Caprino');">
+                          <div class="d-flex justify-content-start ">
+                              <span class="menu-collapsed">Ovino-Caprino </span>
+                          </div>
+                      </a>
+                       <!--Fin de Separator with title Ganaderia-->
+                      <!-- Separator without title Aves-->
+                      <li class="titulo-olivo list-group-item sidebar-separator menu-collapsed">
+                        <h4>Aves</h4></li>            
+                      <!-- /END Separator -->
+                      <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('Pollos');">
+                          <div class="d-flex justify-content-start" >
+                              <span >Pollos</span>
+                          </div>
+                      </a>
+                      <a href="#producto" data-toggle="sidebar-colapse" class="bg-olive list-group-item list-group-item-action d-flex align-items-center">
+                          <div class="d-flex justify-content-start ">
+                              <span id="collapse-text" class="menu-collapsed" onclick="cambioProdcc('Gansos');">Gansos</span>
+                          </div>
+                      </a> 
+                      <!-- Separator without title Aves-->                       
+                  </ul><!-- List Group END-->

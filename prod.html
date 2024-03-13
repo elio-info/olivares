@@ -46,7 +46,7 @@
             <div class="container">
               <div class="carousel-caption">
                 <h1>Cuidando de lo principal.</h1>
-                <p>Nos distinguen los Olivos. Su cuidado y preservacion nos importa.</p>
+                <p>La paz comienza con una sonrisa y un OLIVO.</p>
               </div>
             </div>
           </div>
@@ -105,74 +105,58 @@
 
     <div class="content">      
         <div class="row" id="centro info">
-          <div class="col-4 " ><!-- navega de col 4, cosa del lado -->
+          <div class="col-md-4" ><!-- navega de col 4, cosa del lado -->
             <div class="row" id="body-row">
               <!-- Sidebar -->
               <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
                   <!-- Bootstrap List Group -->
-                  <ul class="list-group">
-                      <!-- Separator with title Plantaciones-->
-                      <li class="titulo-olivo list-group-item sidebar-separator-title d-flex align-items-center menu-collapsed">
-                          <h4>Plantaciones</h4>
-                      </li>
-                      <!-- /END Separator -->
-                      <!-- Menu with submenu -->
-                      <a href="#producto" class="bg-olive list-group-item list-group-item-action flex-column align-items-start" onclick="cambioProdcc('olivo');">
-                          <div class="d-flex w-100 justify-content-start align-items-center">
-                              <span class="menu-collapsed">Olivos</span>                              
-                          </div>
-                      </a>                                 
-                     <!-- Fin de Separator with title Plantaciones-->
-                      <!-- Separator with title Ganaderia-->
+                <ul class="list-group">
+                    <!-- Separator with title Olivos-->
+                    <li class="titulo-olivo list-group-item sidebar-separator-title d-flex align-items-center menu-collapsed">
+                      <h4>Olivo</h4>
+                    </li>
+                  <!-- /END Separator -->
+                  <!-- Menu with submenu -->
+                  <a href="#producto" class="bg-olive list-group-item list-group-item-action flex-column align-items-start" onclick="cambioProdcc('olivo');">
+                      <div class="d-flex w-100 justify-content-start align-items-center">
+                          <span class="menu-collapsed">Oh ! Premium olive oil</span>                              
+                      </div>
+                  </a>                                 
+                 <!-- Fin de Separator with title Olivos-->
+                 
+                      <!-- Separator with title Salsas-->
                       <li class="titulo-olivo list-group-item sidebar-separator-title  d-flex align-items-center menu-collapsed">
-                          <h4>Ganadería</h4>
-                      </li>
-                      <!-- /END Separator -->
-                      <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('Cerdos');">
-                          <div class="d-flex justify-content-start ">
-                              <span class="menu-collapsed">Cerdos</span>
-                          </div>
-                      </a>
-                      <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('Vacunos');">
-                          <div class="d-flex w-100 justify-content-start align-items-center">
-                              <span >Vacunos </span>
-                          </div>
-                      </a>
-                      <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('Ovino-Caprino');">
-                          <div class="d-flex justify-content-start ">
-                              <span class="menu-collapsed">Ovino-Caprino </span>
-                          </div>
-                      </a>
-                       <!--Fin de Separator with title Ganaderia-->
-                      <!-- Separator without title Aves-->
+                        <h4>Salsas</h4>
+                    </li>
+                    <!-- /END Separator -->
+                    <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('picant');">
+                        <div class="d-flex justify-content-start ">
+                            <span class="menu-collapsed">Cubanito Picantico </span>
+                        </div>
+                    </a>
+                      <!--Fin de Separator with title Salsas-->
+                      <!-- Separator without title Vinos-->
                       <li class="titulo-olivo list-group-item sidebar-separator menu-collapsed">
-                        <h4>Aves</h4></li>            
+                        <h4>Vinos</h4></li>            
                       <!-- /END Separator -->
-                      <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('Pollos');">
+                      <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('vino');">
                           <div class="d-flex justify-content-start" >
-                              <span >Pollos</span>
+                              <span >Canna Vinus</span>
                           </div>
                       </a>
-                      <a href="#producto" data-toggle="sidebar-colapse" class="bg-olive list-group-item list-group-item-action d-flex align-items-center">
-                          <div class="d-flex justify-content-start ">
-                              <span id="collapse-text" class="menu-collapsed" onclick="cambioProdcc('Gansos');">Gansos</span>
-                          </div>
-                      </a> 
-                      <!-- Separator without title Aves-->                       
-                  </ul><!-- List Group END-->
+                </ul><!-- fin Bootstrap List Group -->
               </div><!-- sidebar-container END -->          
               
               
-          </div><!-- body-row END -->           
+            </div><!-- body-row END -->           
           </div><!-- fin de col 4, cosa del lado -->
           <!-- fotos de la finca -->
-          <div class="col-8 border rounded-lg" >
+          <div class="col-md-8 border rounded-lg">
           <!-- aqui es algo -->
           <div id="producto"class="row container-fluid">
             <div id="producto-cabeza" class="pt-4 bg-success text-white justify-content-center">
               <h3 id="cabeza-olivo">
-                Olea europea &nbsp;
-                
+                Olea europea &nbsp;                
                 <select id="producto-variedad" onchange="llenarProdcc(value)">
                   <option value="0" selected>Arbequina</option>
                   <option value="1">Arbosana</option>
@@ -187,7 +171,7 @@
               <h3 id="cabeza-otros">
               </h3>
             </div><!-- div fin producto-cabeza -->
-            <div id="producto-fotos" class="">
+            <div id="producto-fotos" class="row">
               <div class="row">
                     <div >
                         <img src="./imgs/local/IMG-05.jpg" id="galeriaImg" alt="Olive Farm" class="imagenScala80" >            
@@ -201,9 +185,11 @@
                 </div>
                 <!-- fin de seccion de thumbs -->
             </div><!-- div fin producto-fotos -->
-            <div id="producto-oferta" class="container">
+            <!-- div id="producto-oferta" class="row container" -->
+            <div id="producto-oferta" class="row ">
               <div class="row"> 
-                <section id="producto-oferta-ofrece" class="pt-4 col-4">
+                <!-- class="pt-4 col-4" -->
+                <section id="producto-oferta-ofrece" >
                 <div class="bg-olive text-green">
                   <h3>Ofrecemos..</h3>
                 </div>                
@@ -211,22 +197,26 @@
                   Muy bonito..
                 </p>
                 </section><!-- section fin producto-oferta-ofrece -->
-                <section id="producto-oferta-agro" class="pt-4 col-4">
+                <div id="de_olivo" class="">
+                  <!-- class="pt-4 col-4" -->
+                <div id="producto-oferta-agro" >
                   <div class="bg-warning text-white">
                     <h3>Agro-Información</h3>
                   </div>
                   <p id="agro">
                     Muy bonito..
                   </p>
-                  </section><!-- section fin producto-oferta-agro -->
-                  <section id="producto-oferta-morfo" class="pt-4 col-4">
+                  </div><!-- section fin producto-oferta-agro -->
+                  <!-- class="pt-4 col-4" -->
+                  <div id="producto-oferta-morfo" >
                     <div class="bg-success text-white">
                       <h3>Morfo-Información</h3>
                     </div>
                     <p id="morfo">
                       Muy bonito..
                     </p>
-                    </section><!-- section fin producto-oferta-morfo -->
+                  </div><!-- section fin producto-oferta-morfo -->
+                </div><!-- section fin de_olivo -->
               </div>
             </div><!-- div fin producto-oferta -->
           </div><!-- div fin producto -->
