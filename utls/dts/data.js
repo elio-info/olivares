@@ -84,6 +84,8 @@ function cambioProdcc(params) {
             document.getElementById('de_olivo').className=`oculto`
             // otros
             document.getElementById('cabeza-otros').innerHTML=sals + prod_sals[0].nombre
+            // ofrecemos
+            document.getElementById('ofrece').innerHTML=prod_sals[0].ofrece
             document.getElementById('cabeza-otros').className=``
             break;
         case 'Vacunos':
@@ -106,6 +108,9 @@ function cambioProdcc(params) {
                 document.getElementById('de_olivo').className=`oculto`
                 // otros
                 document.getElementById('cabeza-otros').innerHTML=vino + prod_vino[0].nombre
+                // ofrecemos
+                document.getElementById('ofrece').innerHTML=prod_vino[0].ofrece
+            
                 document.getElementById('cabeza-otros').className=``                
                 break;
         case 'Gansos':
