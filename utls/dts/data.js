@@ -75,15 +75,17 @@ let prod_vino=[
     }
 ]
 
-function llenarProdcc(params) {
-    let prod=prod_olive[params]
+function llenarProdcc(data,root) {
+    let prod=prod_olive[data],
+        placeToPutDescrp= document.getElementById('ofrece'),
+        placeToPutCarousel= document.getElementById('ponerCarousel')
+
     // fotos
-    // ofrecemos
-    document.getElementById('ofrece').innerHTML=prod.ofrece
-    // agro
-    document.getElementById('agro').innerHTML=prod.agro
-    // morfo
-    document.getElementById('morfo').innerHTML=prod.morfo
+    
+
+    // descripcion de ofrecemos
+    placeToPut.innerHTML=prod.ofrece
+   
 }
 
 function cambioProdcc(params) {
@@ -92,7 +94,7 @@ function cambioProdcc(params) {
         case 'picant':
             // olivos
             document.getElementById('cabeza-olivo').className=`oculto`
-            document.getElementById('de_olivo').className=`oculto`
+            // document.getElementById('de_olivo').className=`oculto`
             // otros
             document.getElementById('cabeza-otros').innerHTML=sals + prod_sals[0].nombre
             // ofrecemos
@@ -116,7 +118,7 @@ function cambioProdcc(params) {
         case 'vino':
                 // olivos
                 document.getElementById('cabeza-olivo').className=`oculto`
-                document.getElementById('de_olivo').className=`oculto`
+                // document.getElementById('de_olivo').className=`oculto`
                 // otros
                 document.getElementById('cabeza-otros').innerHTML=vino + prod_vino[0].nombre
                 // ofrecemos
@@ -134,7 +136,7 @@ function cambioProdcc(params) {
         default:
             // olivos
             document.getElementById('cabeza-olivo').className=``
-            document.getElementById('de_olivo').className=``
+            // document.getElementById('de_olivo').className=``
             // otros
             document.getElementById('cabeza-otros').className=`oculto`
             break;

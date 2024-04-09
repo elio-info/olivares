@@ -14,7 +14,7 @@
   <link href="utls/css/mycss.css" rel="stylesheet" type="text/css">
 </head>
 
-<body onload="cambioProdcc('olivo');">
+<body onload="llenarProdcc(0);">
 
   <div class="container">
     <!-- inicio .header -->
@@ -119,24 +119,24 @@
                   <!-- Menu with submenu -->
                   <a href="#producto" class="bg-olive list-group-item list-group-item-action flex-column align-items-start" onclick="cambioProdcc('olivo');">
                       <div class="d-flex w-100 justify-content-start align-items-center">
-                          <span class="menu-bold"> <b></b>Plantas de Olivo</span>                              
+                          <span class="menu-collapsed">Oh ! Premium olive oil</span>                              
                       </div>
                   </a> 
                   <a href="#producto" class="bg-olive list-group-item list-group-item-action flex-column align-items-start" onclick="cambioProdcc('olivo-venta');">
                     <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-bold">Oh ! Premium olive oil</span>                              
+                        <span class="menu-collapsed">Plantas de Olivo</span>                              
                     </div>
                 </a>                                  
                  <!-- Fin de Separator with title Olivos-->
                  
                       <!-- Separator with title Salsas-->
-                      <li class="titulo-olivo list-group-item sidebar-separator-title  d-flex align-items-center menu-bold">
+                      <li class="titulo-olivo list-group-item sidebar-separator-title  d-flex align-items-center menu-collapsed">
                         <h4>Salsas</h4>
                     </li>
                     <!-- /END Separator -->
                     <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('picant');">
                         <div class="d-flex justify-content-start ">
-                            <span class="menu-bold">Cubanito Picantico </span>
+                            <span class="menu-collapsed">Cubanito Picantico </span>
                         </div>
                     </a>
                       <!--Fin de Separator with title Salsas-->
@@ -146,7 +146,7 @@
                       <!-- /END Separator -->
                       <a href="#producto" class="bg-olive list-group-item list-group-item-action" onclick="cambioProdcc('vino');">
                           <div class="d-flex justify-content-start" >
-                              <span class="menu-bold">Canna Vinus</span>
+                              <span >Canna Vinus</span>
                           </div>
                       </a>
                 </ul><!-- fin Bootstrap List Group -->
@@ -177,7 +177,7 @@
               </h3>
             </div><!-- div fin producto-cabeza -->
             <div id="producto-fotos" class="row">
-              <div class="row" id="ponerCarousel">
+              <div class="row">
                     <div >
                         <img src="./imgs/local/IMG-05.jpg" id="galeriaImg" alt="Olive Farm" class="imagenScala80" >            
                     </div>            
@@ -186,7 +186,7 @@
                 <div id="thumbsSeccion" class="row">
                     <picture><img src="./imgs/local/IMG-05.jpg" alt="ads" class="imagenScala20 active" id="05" onclick="mostrarEnCarrusel('05');"></picture>
                     <picture><img src="imgs/IMG-06.jpg" alt="asda" class="imagenScala20" id="06" onclick="mostrarEnCarrusel('06');"></picture>
-                    <img src="imgs/IMG-10.jpg" alt="asda" class="imagenScala20" id="10" onclick="mostrarEnCarrusel('10');"></picture>
+                    <picture></picture><img src="imgs/IMG-10.jpg" alt="asda" class="imagenScala20" id="10" onclick="mostrarEnCarrusel('10');"></picture>
                 </div>
                 <!-- fin de seccion de thumbs -->
             </div><!-- div fin producto-fotos -->
@@ -195,14 +195,33 @@
               <div class="row"> 
                 <!-- class="pt-4 col-4" -->
                 <section id="producto-oferta-ofrece" >
-                <div class="bg-success text-white">
+                <div class="bg-olive text-green">
                   <h3>Ofrecemos..</h3>
                 </div>                
                 <p id="ofrece">
                   Muy bonito..
                 </p>
                 </section><!-- section fin producto-oferta-ofrece -->
-                
+                <div id="de_olivo" class="">
+                  <!-- class="pt-4 col-4" -->
+                <div id="producto-oferta-agro" >
+                  <div class="bg-warning text-white">
+                    <h3>Agro-Información</h3>
+                  </div>
+                  <p id="agro">
+                    Muy bonito..
+                  </p>
+                  </div><!-- section fin producto-oferta-agro -->
+                  <!-- class="pt-4 col-4" -->
+                  <div id="producto-oferta-morfo" >
+                    <div class="bg-success text-white">
+                      <h3>Morfo-Información</h3>
+                    </div>
+                    <p id="morfo">
+                      Muy bonito..
+                    </p>
+                  </div><!-- section fin producto-oferta-morfo -->
+                </div><!-- section fin de_olivo -->
               </div>
             </div><!-- div fin producto-oferta -->
           </div><!-- div fin producto -->
