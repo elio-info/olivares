@@ -115,12 +115,13 @@ function cambioProdcc(params) {
             document.getElementById('ofrece').innerHTML=prod_sals[0].ofrece
             document.getElementById('cabeza-otros').className=``
             break;
-        case 'Vacunos':
-            // olivos
+        case 'olivo-venta':
+            // productos de olivos
             document.getElementById('cabeza-olivo').className=`oculto`
             // otros
-            document.getElementById('cabeza-otros').innerHTML=sals + params
+            document.getElementById('cabeza-otros').innerHTML="Ventas de productos"
             document.getElementById('cabeza-otros').className=``
+            llenarProdcc(prod_olive_venta[0],'Identificadas')
             break;
         case 'Ovino-Caprino':
             // olivos
