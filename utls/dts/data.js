@@ -1,59 +1,43 @@
 let prod_olive=[
     { "variedad":"Arbequina",
-        "fotos": ['plantas_ventas','Arbequina'],
+        "fotos": ['plantas_ventas','Arbequina','ejemplo','ejemplo-v'],
         "ofrece":"Aceite oliva Premium " 
     },
     { "variedad": "Arbosana",
-        "fotos": ['05','10'],
-        "ofrece":"Aceite oliva Premium ",
-        "agro":"",
-        "morfo":""
+        "fotos": ['plantas_ventas','Arbosana','ejemplo-v','ejemplo'],
+        "ofrece":"Aceite oliva Premium "
     },
     { "variedad": "Ascolana",
-        "fotos": ['05','10'],
-        "ofrece":"Aceite oliva Premium ",
-        "agro":"",
-        "morfo":""
+        "fotos": ['plantas_ventas','Ascolana','ejemplo','ejemplo-v'],
+        "ofrece":"Aceite oliva Premium "
     },
     {"variedad":"Kalamata",
-        "fotos": ['05','10'],
-        "ofrece":"Aceite oliva Premium ",
-        "agro":"",
-        "morfo":""
+        "fotos": ['plantas_ventas','Kalamata','ejemplo','ejemplo-v'],
+        "ofrece":"Aceite oliva Premium "
     },
     { "variedad":"Koroneiki",
-        "fotos": ['05','10'],
-        "ofrece":"Aceite oliva Premium ",
-        "agro":"",
-        "morfo":""
+        "fotos": ['plantas_ventas','Koroneiki','ejemplo-v','ejemplo'],
+        "ofrece":"Aceite oliva Premium "
     },
     { "variedad": "Manzanilla",
-        "fotos": ['plantas_ventas','Manzanilla'],
-        "ofrece":"Aceite oliva Premium ",
-        "agro":"",
-        "morfo":""
+        "fotos": ['plantas_ventas','Manzanilla','ejemplo-v','ejemplo'],
+        "ofrece":"Aceite oliva Premium "
     },
     { "variedad": "Olivo Picual",
-        "fotos": ['05','10'],
-        "ofrece":"Aceite oliva Premium ",
-        "agro":"La variedad de olivo Picual es la principal en España donde se cultivan más de 900.000 ha. El árbol es vigoroso, resistente al frío, y de maduración temprana, es muy sensible a la verticilosis. Su aceite es muy apreciado por su estabilidad y elevado contenido en ácido oleico. En algunas zonas se utiliza también el fruto como aceituna de mesa.",
-        "morfo":"La variedad Picual participa en numerosas denominaciones de origen en toda España, como variedad principal o secundaria. Participa como parental en los programas de mejora genética del olivo de la universidad de Córdoba.",
-        "desc":"Aceite de oliva de categoría superior, obtenido directamebte de aceitunas y solo mediante procedimientos mecánicos. 100% variedad Picual. Extracción en frío."
+        "fotos": ['plantas_ventas','Picual','ejemplo','ejemplo-v'],
+        "ofrece":"Aceite oliva Premium "       
     },
     {"variedad":"Taggiasca",
-        "fotos": ['05','10'],
-        "ofrece":"Aceite oliva Premium ",
-        "agro":"Árboles de gran porte, es de vigor alto, porte abierto-llorón y copa de media densidad. Adaptado a zona más costera o más elevada.  El olivo Taggiasca, se adapta bien a diversas condiciones, tanto pegando al mar como en zonas de mayor altitud. ",
-        "morfo":"Destaca por sus buenas características productivas y la alta valoración del aceite y aceitunas producidos, es de entrada en producción precoz y de producción alta, obtiene producciones regulares. Es de floración mediay su polen es parcialmente autocompatible"
+        "fotos": ['plantas_ventas','Taggiasca','ejemplo','ejemplo-v'],
+        "ofrece":"Aceite oliva Premium "
     }
 ]
 let prod_olive_venta=[
-                { "variedad":"Diferentes",
-                    "fotos": ['05','10'],
-                    "ofrece":"Planta de la variedad Sevillano",
-                    "agro":"La variedad Arbequina es resistente al frío y a la salinidad, es susceptible a la clorosis férrica en terrenos con suelos muy calizos. También es sensible a la tuberculosis, verticilosis y a la mosca del olivo. ",
-                    "morfo":"Árbol.	Bajo vigor con porte abierto y media densidad de copa.        Fruto.	Peso bajo, con forma esférica simétrica. Ápice redondeado y base truncada, sin pezón y pocas lenticelas.   Hoja.	De corta longitud, elíptica y medianamente ancha.        Hueso.	Con peso bajo, ovoide, simétrico, ápice y base redondeadas, y superficie rugosa."
-                }] 
+    { "variedad":"Oh! Aceite",
+        "fotos": ['aceites','10'],
+        "ofrece":"Toda una aceites categor&iacute;a <b>Extra Virgen</b> de la variedad Sevillano"                    
+    }
+] 
   
 let prod_sals=[
     { "nombre":" Cubanito Picantico",
