@@ -1,9 +1,7 @@
 let prod_olive=[
     { "variedad":"Arbequina",
-        "fotos": ['Arbequina','10'],
-        "ofrece":"Aceite oliva Premium ",
-        "agro":"La variedad Arbequina es resistente al frío y a la salinidad, es susceptible a la clorosis férrica en terrenos con suelos muy calizos. También es sensible a la tuberculosis, verticilosis y a la mosca del olivo. ",
-        "morfo":"Árbol.	Bajo vigor con porte abierto y media densidad de copa.        Fruto.	Peso bajo, con forma esférica simétrica. Ápice redondeado y base truncada, sin pezón y pocas lenticelas.   Hoja.	De corta longitud, elíptica y medianamente ancha.        Hueso.	Con peso bajo, ovoide, simétrico, ápice y base redondeadas, y superficie rugosa."
+        "fotos": ['plantas_ventas','Arbequina'],
+        "ofrece":"Aceite oliva Premium " 
     },
     { "variedad": "Arbosana",
         "fotos": ['05','10'],
@@ -58,8 +56,7 @@ let prod_olive_venta={
                     "agro":"La variedad Arbequina es resistente al frío y a la salinidad, es susceptible a la clorosis férrica en terrenos con suelos muy calizos. También es sensible a la tuberculosis, verticilosis y a la mosca del olivo. ",
                     "morfo":"Árbol.	Bajo vigor con porte abierto y media densidad de copa.        Fruto.	Peso bajo, con forma esférica simétrica. Ápice redondeado y base truncada, sin pezón y pocas lenticelas.   Hoja.	De corta longitud, elíptica y medianamente ancha.        Hueso.	Con peso bajo, ovoide, simétrico, ápice y base redondeadas, y superficie rugosa."
                 }] 
-}
-   
+}   
 let prod_sals=[
     { "nombre":" Cubanito Picantico",
         "fotos": ['05','10'],
@@ -76,15 +73,34 @@ let prod_vino=[
 ]
 
 function llenarProdcc(data,root) {
-    let prod=prod_olive[data],
-        placeToPutDescrp= document.getElementById('ofrece'),
-        placeToPutCarousel= document.getElementById('ponerCarousel')
+    let prod_fotos=data.fotos,
+        ponerCarousel=document.getElementById('thumbsSeccion')
+    // llenar las imagenes
+    // 1-vaciar
+    while (ponerCarousel.firstChild) {
+        // The list is LIVE so it will re-index each call
+        ponerCarousel.removeChild(ponerCarousel.firstChild);
+      }
+    // llenar el trip
+    prod_fotos.map(e =>{
+        let imgVinc=document.createElement('img'),
+            atta="'"+e+"','"+root+"'"
 
+            imgVinc.setAttribute( 'src','utls/imgs/'+root+'/IMG-'+e+'.jpg')
+            imgVinc.setAttribute('id','e')
+            imgVinc.setAttribute('alt','ads')
+            imgVinc.setAttribute('onclick','mostrarEnCarrusel('+atta+');')
+            imgVinc.setAttribute('className',"imagenScala20")
+       
+        ponerCarousel.appendChild(imgVinc) 
+    })
     // fotos
+    // cambiar Foto Principal
+    mostrarEnCarrusel(prod_fotos[0],root);
+    // descripcion de ofrecemos
+    document.getElementById('ofrece').innerHTML=data.ofrece
     
 
-    // descripcion de ofrecemos
-    placeToPut.innerHTML=prod.ofrece
    
 }
 
@@ -135,10 +151,12 @@ function cambioProdcc(params) {
                 break;
         default:
             // olivos
-            document.getElementById('cabeza-olivo').className=``
-            // document.getElementById('de_olivo').className=``
-            // otros
+            document.getElementById
+            ('cabeza-olivo').className=``
+            // ocultar otros
             document.getElementById('cabeza-otros').className=`oculto`
+            // llenar con fotos
+           llenarProdcc(prod_olive[0],'Identificadas')
             break;
     }
 }
