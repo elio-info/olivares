@@ -28,7 +28,7 @@ let prod_olive=[
         "morfo":""
     },
     { "variedad": "Manzanilla",
-        "fotos": ['05','10'],
+        "fotos": ['plantas_ventas','Manzanilla'],
         "ofrece":"Aceite oliva Premium ",
         "agro":"",
         "morfo":""
@@ -47,16 +47,14 @@ let prod_olive=[
         "morfo":"Destaca por sus buenas características productivas y la alta valoración del aceite y aceitunas producidos, es de entrada en producción precoz y de producción alta, obtiene producciones regulares. Es de floración mediay su polen es parcialmente autocompatible"
     }
 ]
-let prod_olive_venta={
-    "lugar":"products",
-    "obj": [
+let prod_olive_venta=[
                 { "variedad":"Diferentes",
                     "fotos": ['05','10'],
                     "ofrece":"Planta de la variedad Sevillano",
                     "agro":"La variedad Arbequina es resistente al frío y a la salinidad, es susceptible a la clorosis férrica en terrenos con suelos muy calizos. También es sensible a la tuberculosis, verticilosis y a la mosca del olivo. ",
                     "morfo":"Árbol.	Bajo vigor con porte abierto y media densidad de copa.        Fruto.	Peso bajo, con forma esférica simétrica. Ápice redondeado y base truncada, sin pezón y pocas lenticelas.   Hoja.	De corta longitud, elíptica y medianamente ancha.        Hueso.	Con peso bajo, ovoide, simétrico, ápice y base redondeadas, y superficie rugosa."
                 }] 
-}   
+  
 let prod_sals=[
     { "nombre":" Cubanito Picantico",
         "fotos": ['05','10'],
