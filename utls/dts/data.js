@@ -35,15 +35,16 @@ let prod_olive=[
 let prod_olive_venta=[
     { "variedad":"Oh! Aceite",
         "fotos": ['aceites','10'],
-        "ofrece":"Toda una aceites categor&iacute;a <b>Extra Virgen</b> de la variedad Sevillano"                    
+        "ofrece":"Aceites de oliva <b>Extra Virgen</b>. Oh! Premium olive Oil "                    
     }
 ] 
   
 let prod_sals=[
     { "nombre":" Cubanito Picantico",
-        "fotos": ['05','10'],
+        "fotos": ['salsa-inflable','salsa-variantes'],
         "ofrece":"Que cosa mas rica",
-        "agro":"ipsum"
+        "facebook":'https://www.facebook.com/cubanitopicantico/?locale=es_LA',
+        "url":"https://cubanitopicantico.com/"
     }
 ]
 let prod_vino=[
@@ -98,6 +99,8 @@ function cambioProdcc(params) {
             // ofrecemos
             document.getElementById('ofrece').innerHTML=prod_sals[0].ofrece
             document.getElementById('cabeza-otros').className=``
+            // llenando
+            llenarProdcc(prod_sals[0],'salsa')            
             break;
         case 'olivo-venta':
             // productos de olivos
@@ -105,14 +108,7 @@ function cambioProdcc(params) {
             // otros
             document.getElementById('cabeza-otros').innerHTML="Ventas de productos"
             document.getElementById('cabeza-otros').className=``
-            llenarProdcc(prod_olive_venta[0],'Identificadas')
-            break;
-        case 'Ovino-Caprino':
-            // olivos
-            document.getElementById('cabeza-olivo').className=`oculto`
-            // otros
-            document.getElementById('cabeza-otros').innerHTML=sals + params
-            document.getElementById('cabeza-otros').className=``
+            llenarProdcc(prod_olive_venta[0],'aceites')
             break;
         case 'vino':
                 // olivos
@@ -123,14 +119,9 @@ function cambioProdcc(params) {
                 // ofrecemos
                 document.getElementById('ofrece').innerHTML=prod_vino[0].ofrece
             
-                document.getElementById('cabeza-otros').className=``                
-                break;
-        case 'Gansos':
-                // olivos
-                document.getElementById('cabeza-olivo').className=`oculto`
-                // otros
-                document.getElementById('cabeza-otros').innerHTML=vino + params
-                document.getElementById('cabeza-otros').className=``
+                document.getElementById('cabeza-otros').className=`` 
+                // llenando
+                llenarProdcc(prod_vino[0],'vinos')               
                 break;
         default:
             // olivos
