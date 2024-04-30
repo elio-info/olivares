@@ -34,14 +34,14 @@ let prod_olive=[
 ]
 let prod_olive_venta=[
     { "variedad":"Oh! Aceite",
-        "fotos": ['aceites','10'],
+        "fotos": ['aceites','aceite-evoo-02','aceite-evoo-01','aceite-oh-white','aceite-oh-black','stand-olive'],
         "ofrece":"Aceites de oliva <b>Extra Virgen</b>. Oh! Premium olive Oil "                    
     }
 ] 
   
 let prod_sals=[
     { "nombre":" Cubanito Picantico",
-        "fotos": ['salsa-inflable','salsa-variantes'],
+        "fotos": ['salsa-inflable2','salsa-variantes','salsa-ico2'],
         "ofrece":"Que cosa mas rica",
         "facebook":'https://www.facebook.com/cubanitopicantico/?locale=es_LA',
         "url":"https://cubanitopicantico.com/"
