@@ -82,9 +82,6 @@ function llenarProdcc(data,root) {
     mostrarEnCarrusel(prod_fotos[0],root);
     // descripcion de ofrecemos
     document.getElementById('ofrece').innerHTML=data.ofrece
-    
-
-   
 }
 
 function cambioProdcc(params) {

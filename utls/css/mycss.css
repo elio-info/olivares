@@ -46,6 +46,17 @@ body {
 	height: 25rem;
 	width: 70rem;
 }
+
+.imagenScala{ 	
+	max-height: 90cqh;
+    /*max-width: 100%;
+    height: 100%;
+	width: min-content;
+    display:block;*/
+	object-fit: contain;  
+}
+
+
 .imgCa{
 	height: 100%;
 	width: 100%;
