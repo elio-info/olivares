@@ -49,7 +49,7 @@ let prod_sals=[
 ]
 let prod_vino=[
     { "nombre":" Canna Vinus",
-        "fotos": ['05','10'],
+        "fotos": ['vino-copa','vino-01'],
         "ofrece":"Producto de alta calidad y que sirve para",
         "agro":"ipsum"
     }
