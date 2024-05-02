@@ -14,20 +14,22 @@ let ciencia_invest_art=[
 
 // ciencia e investigacion
 function cambioCiencia(params) {
-  
+  let ponerDatos=document.getElementById('producto-oferta')
+   // 1-vaciar
+   while (ponerDatos.firstChild) {
+    // The list is LIVE so it will re-index each call
+    ponerDatos.removeChild(ponerDatos.firstChild);
+  }
   switch (params) {
-      case 'vino':
-              // olivos
-              document.getElementById('cabeza-olivo').className=`oculto`
-              // document.getElementById('de_olivo').className=`oculto`
-              // otros
-              document.getElementById('cabeza-otros').innerHTML=vino + prod_vino[0].nombre
-              // ofrecemos
-              document.getElementById('ofrece').innerHTML=prod_vino[0].ofrece
-          
-              document.getElementById('cabeza-otros').className=`` 
-              // llenando
-              llenarProdcc(prod_vino[0],'vinos')               
+      case 'proy':
+              // proys
+              document.getElementById('cabeza-producto').innerHTML=' Proyectos '
+              // en construcc
+               //dentro del DIV, agrego el icono de Construcc
+              let proy_const = document.createElement("img");
+              proy_const.src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor
+              proy_const.className = 'imageScala';//poner icono clase valor
+              document.getElementById('producto-oferta').appendChild(proy_const)
               break;
       default:
           // articulos
@@ -38,20 +40,26 @@ function cambioCiencia(params) {
   }
 }
 
+
 /**
- * The `fillLiterature` function creates a card structure for literature data with an icon, title, and
+ * The function `fillLiterature` creates a card structure for literature data with an icon, title, and
  * link.
- * @param literatureData - The `literatureData` parameter seems to be an object containing information
- * about a piece of literature. It likely includes properties such as: name,source,type of literature
- * @param literaturaIcoClass - The `literaturaIcoClass` parameter in the `fillLiterature` function is
- * used to specify the CSS class that will be applied to the icon element representing the type of
- * document in the literature card. This class will determine the styling of the icon, such as its
- * size
- * @returns The `fillLiterature` function is returning a `div` element that contains a card for
- * literature data. The card includes an icon, a link to the literature document, and the title of the
- * literature document.
+ * @param literatureData - The `literatureData` parameter is an object that contains information about
+ * a piece of literature. It typically includes properties such as `ico` (icon URL), `ruta` (document
+ * URL), and `nomb` (document title).
+ * @param literatureIcoClass - The `literatureIcoClass` parameter is a class name that will be assigned
+ * to the icon element of the literature document in the HTML structure created by the `fillLiterature`
+ * function. This class name is used for styling purposes, allowing you to apply specific CSS styles to
+ * the icon element.
+ * @param literatureTitleClass - The `literatureTitleClass` parameter is a class name that will be
+ * assigned to the `<span>` element containing the title of the literature document in the generated
+ * HTML structure. This class can be used for styling or targeting this specific element using CSS or
+ * JavaScript.
+ * @returns The function `fillLiterature` is returning a dynamically created HTML element structure
+ * that represents a literature card. This structure includes an image icon representing the type of
+ * document, a link to the document file, and the title of the document.
  */
-function fillLiterature(literatureData,literaturaIcoClass) {
+function fillLiterature(literatureData,literatureIcoClass,literatureTitleClass) {
   //crear estructura cuerpo tarjeta Documento
   // imagen-tipo-literatura {enlace-doc > imagen-tipo-doc-extension año-doc titulo-doc} 
 
@@ -61,7 +69,7 @@ function fillLiterature(literatureData,literaturaIcoClass) {
   //dentro de la tarjeta completa, agrego el icono del tipo de Doc
   let doc_tipo_ico = document.createElement("img");
   doc_tipo_ico.src = literatureData.ico;//poner icono lugar valor
-  doc_tipo_ico.className = literaturaIcoClass;//poner icono clase valor
+  doc_tipo_ico.className = literatureIcoClass;//poner icono clase valor
 
   literatureCard_p.appendChild(doc_tipo_ico);//agrego dentro de la tarjeta completa, agrego el icono del tipo de Doc
   
@@ -70,7 +78,9 @@ function fillLiterature(literatureData,literaturaIcoClass) {
   doc_pdfLink.href =literatureData.ruta;  
 
   let titulo=document.createElement('span')
-  titulo.innerHTML='&nbsp; '+literatureData.nomb
+  titulo.innerHTML='&nbsp; '+literatureData.nomb+'&nbsp; &nbsp;'
+  titulo.className=literatureTitleClass
+
   doc_pdfLink.appendChild(titulo);//agrego espacio entre img y vinculo
 
   literatureCard_p.appendChild(doc_pdfLink);//agrego dentro de la tarjeta completa, enlace de Doc 
@@ -80,53 +90,56 @@ function fillLiterature(literatureData,literaturaIcoClass) {
   div_literatura.appendChild(literatureCard_p);//agrego dentro de la tarjeta completa, agrego el p
 
   return div_literatura;
+}
 
+/**
+ * The function `fillAuthorsLierature` creates a list of authors based on the input parameters.
+ * @param params : array of authors - It seems like the `params` variable is an array containing the authors' names or
+ * literature titles. The `fillAuthorsLierature` function creates a `<ul>` element and populates it
+ * with `<li>` elements for each author or literature title in the `params` array. Each `<li
+ * @returns An unordered list (`<ul>`) element containing list items (`<li>`) for each author in the
+ * `params` array. Each list item will have the author's value set based on the elements in the
+ * `params` array.
+ */
+function fillAuthorsLierature(params) {
+  let uList=document.createElement('ul')
+  params.map(elt=>{
+    let author=document.createElement('li')
+      author.innerHTML=elt
+    uList.appendChild(author)}
+    )
+  return uList    
 }
 
 
+/**
+ * The function `crearAccStack` creates a div element with literature content, author information, and
+ * a link to an article.
+ * @param param : array of articles - It looks like the code snippet you provided is a function called `crearAccStack` that
+ * creates a stack of elements based on the `param` object passed to it. However, the `param` object
+ * itself is not included in your message. If you provide me with the details of the `param
+ * @returns The function `crearAccStack` is returning a dynamically created HTML element structure
+ * based on the `param` object passed to it. The returned element contains a row (`div` with class
+ * 'row') with various child elements such as literature image, authors, and a nested row with a
+ * header, a link, and an image.
+ */
 function crearAccStack(param) {
   let div_row=document.createElement('div')//creando eleto row
     div_row.setAttribute( 'class','row')
-    let algo=fillLiterature(param,'imgArt')
-    div_row.appendChild(algo)
-    let div_row_inside=document.createElement('div')//creando eleto row de bg-success text-white
-    //div_row_inside.setAttribute( 'class','bg-success text-white')
-    let div_row_inside_h4=document.createElement('h4')//creando eleto row de bg-success text-white
-        div_row_inside_h4.className='bg-success text-white'
-        div_row_inside_h4.innerHTML=param.nomb
-    let div_row_inside_ref=document.createElement('a')//creando eleto row de bg-success text-white
-        div_row_inside_ref.href=param.ruta
-        //imagen
-          let div_row_inside_ref_img=document.createElement('img')//creando eleto row de bg-success text-white
-          div_row_inside_ref_img.src=param.ico
-          div_row_inside_ref_img.alt=param.nomb
-          div_row_inside_ref.appendChild(div_row_inside_ref_img) 
-          let art_ref=document.createElement('p')//creando eleto row de bg-success text-white
-          art_ref.innerHTML= param.nomb.substring(0,10)+'...'
-          div_row_inside_ref.appendChild(art_ref)
+    let algo=fillLiterature(param,'imgArt','bg-success text-white') //creo la literatura
+    div_row.appendChild(algo) //append
 
-      div_row_inside.appendChild(div_row_inside_h4)//incorporar h4
-      div_row_inside.appendChild(div_row_inside_ref)//incorporar vinculo
-
-    div_row.appendChild(div_row_inside)//incorporar row_inside
+    div_row.appendChild(fillAuthorsLierature(param.autor)) //append autores
+  
   return div_row
 }
 
 function llenarAcc(data,root) {
-  let prod_fotos=data.fotos,
-      ponerDatos=document.getElementById('producto-oferta')
-  // llenar las imagenes
-  // 1-vaciar
-  while (ponerDatos.firstChild) {
-      // The list is LIVE so it will re-index each call
-      ponerDatos.removeChild(ponerDatos.firstChild);
-    }
+  let ponerDatos=document.getElementById('producto-oferta')
   // llenar el trip
   data.map(e =>{    
       ponerDatos.appendChild(crearAccStack(e)) 
-  }) 
-  // descripcion de ofrecemos
- // document.getElementById('ofrece').innerHTML=data.ofrece
+  })   
 }
 
 
