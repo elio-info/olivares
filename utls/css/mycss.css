@@ -18,7 +18,6 @@
 
 .oculto{ display: none;}
 
-
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #85a824;
@@ -47,15 +46,14 @@ body {
 	width: 70rem;
 }
 
-.imagenScala{ 	
-	max-height: 90cqh;
-    /*max-width: 100%;
-    height: 100%;
-	width: min-content;
-    display:block;*/
-	object-fit: contain;  
+.imgArt{
+	width: 5%;
 }
 
+.imagenScala{ 	
+	max-height: 90cqh;
+    object-fit: contain;  
+}
 
 .imgCa{
 	height: 100%;

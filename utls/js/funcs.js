@@ -13,30 +13,9 @@ let ciencia_invest_art=[
 ]
 
 // ciencia e investigacion
-
 function cambioCiencia(params) {
   
   switch (params) {
-      case 'picant':
-          // olivos
-          document.getElementById('cabeza-olivo').className=`oculto`
-          // document.getElementById('de_olivo').className=`oculto`
-          // otros
-          document.getElementById('cabeza-otros').innerHTML=sals + prod_sals[0].nombre
-          // ofrecemos
-          document.getElementById('ofrece').innerHTML=prod_sals[0].ofrece
-          document.getElementById('cabeza-otros').className=``
-          // llenando
-          llenarProdcc(prod_sals[0],'salsa')            
-          break;
-      case 'olivo-venta':
-          // productos de olivos
-          document.getElementById('cabeza-olivo').className=`oculto`
-          // otros
-          document.getElementById('cabeza-otros').innerHTML="Ventas de productos"
-          document.getElementById('cabeza-otros').className=``
-          llenarProdcc(prod_olive_venta[0],'aceites')
-          break;
       case 'vino':
               // olivos
               document.getElementById('cabeza-olivo').className=`oculto`
@@ -52,8 +31,7 @@ function cambioCiencia(params) {
               break;
       default:
           // articulos
-          document.getElementById('cabeza-producto').innerHTML=` Art&iacute;culos`
-          
+          document.getElementById('cabeza-producto').innerHTML=` Art&iacute;culos`          
           // llenar con fotos
          llenarAcc(ciencia_invest_art,'Identificadas')
           break;
@@ -61,16 +39,21 @@ function cambioCiencia(params) {
 }
 
 /**
- * @param {string} tipo_doc donde se pone
- * @param {string} literatureFolder arreglos de datos 
- * @param {Array} literatureData arreglos de datos 
- * @param {icon} iconDatAutor icono que lleva
- * @void 
+ * The `fillLiterature` function creates a card structure for literature data with an icon, title, and
+ * link.
+ * @param literatureData - The `literatureData` parameter seems to be an object containing information
+ * about a piece of literature. It likely includes properties such as: name,source,type of literature
+ * @param literaturaIcoClass - The `literaturaIcoClass` parameter in the `fillLiterature` function is
+ * used to specify the CSS class that will be applied to the icon element representing the type of
+ * document in the literature card. This class will determine the styling of the icon, such as its
+ * size
+ * @returns The `fillLiterature` function is returning a `div` element that contains a card for
+ * literature data. The card includes an icon, a link to the literature document, and the title of the
+ * literature document.
  */
-function fillLiterature(literatureData) {
+function fillLiterature(literatureData,literaturaIcoClass) {
   //crear estructura cuerpo tarjeta Documento
-  // imagen-tipo-literatura {enlace-doc > imagen-tipo-doc-extension año-doc titulo-doc}
-  //                           [autor-doc > imagen-tipo-autor nombre-autor]
+  // imagen-tipo-literatura {enlace-doc > imagen-tipo-doc-extension año-doc titulo-doc} 
 
   //dentro de la tarjeta completa, el nombre
   let literatureCard_p = document.createElement('p');
@@ -78,11 +61,10 @@ function fillLiterature(literatureData) {
   //dentro de la tarjeta completa, agrego el icono del tipo de Doc
   let doc_tipo_ico = document.createElement("img");
   doc_tipo_ico.src = literatureData.ico;//poner icono lugar valor
-  //doc_tipo_ico.className = tipo_doc.clase;//poner icono clase valor
+  doc_tipo_ico.className = literaturaIcoClass;//poner icono clase valor
 
   literatureCard_p.appendChild(doc_tipo_ico);//agrego dentro de la tarjeta completa, agrego el icono del tipo de Doc
   
- 
   //dentro de la tarjeta completa, el icono
   let doc_pdfLink = document.createElement("a");  
   doc_pdfLink.href =literatureData.ruta;  
@@ -105,7 +87,7 @@ function fillLiterature(literatureData) {
 function crearAccStack(param) {
   let div_row=document.createElement('div')//creando eleto row
     div_row.setAttribute( 'class','row')
-    let algo=fillLiterature(param)
+    let algo=fillLiterature(param,'imgArt')
     div_row.appendChild(algo)
     let div_row_inside=document.createElement('div')//creando eleto row de bg-success text-white
     //div_row_inside.setAttribute( 'class','bg-success text-white')
