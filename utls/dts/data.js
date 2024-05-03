@@ -34,7 +34,7 @@ let prod_olive=[
 ]
 let prod_olive_venta=[
     { "variedad":"Oh! Aceite",
-        "fotos": ['aceites','aceite-evoo-02','aceite-evoo-01','aceite-oh-white','aceite-oh-black','stand-olive'],
+        "fotos": ['01','aceite-evoo-02','aceite-evoo-01','aceite-oh-white','aceite-oh-black','vista-05'],
         "ofrece":"Aceites de oliva <b>Extra Virgen</b>. Oh! Premium olive Oil "                    
     }
 ] 
@@ -55,6 +55,18 @@ let prod_vino=[
     }
 ]
 
+let prodactv_trabj=[
+    { 
+        "fotos": ['trab-01','trab-02','trab-03','trab-04','trab-05','trab-06','trab-07','trab-08'],
+        "ofrece":"Un lugar de para&iacute;so, donde tambi&eacute;n se trabaja..."
+    }
+]
+let prodactv_visita=[
+    { 
+        "fotos": ['vst-01','vst-02','vst-03','vst-04','vst-05','vst-06','vst-07','vst-08','vst-09'],
+        "ofrece":"Para&iacute;so de visita, donde tambi&eacute;n se relaja..."
+    }
+]
 function llenarProdcc(data,root) {
     let prod_fotos=data.fotos,
         ponerCarousel=document.getElementById('thumbsSeccion')
@@ -129,6 +141,19 @@ function cambioProdcc(params) {
             // llenar con fotos
            llenarProdcc(prod_olive[0],'Identificadas')
             break;
+            case 'visit':
+            // otros
+            document.getElementById('cabeza-otros').innerHTML=prodactv_visita[0].ofrece
+            document.getElementById('cabeza-otros').className=``
+            llenarProdcc(prodactv_visita[0],'act-visita')
+            break;
+        case 'trab':
+                // otros
+                document.getElementById('cabeza-otros').innerHTML=prodactv_trabj[0].ofrece
+                document.getElementById('cabeza-otros').className=`` 
+                llenarProdcc(prodactv_trabj[0],'act-trabajo')               
+                break;
+        
     }
 }
 

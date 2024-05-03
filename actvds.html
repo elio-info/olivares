@@ -14,7 +14,7 @@
   <link href="utls/css/mycss.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body onload="cambioProdcc('visit');">
 
   <div class="container">
     <!-- inicio .header -->
@@ -102,48 +102,59 @@
         </ul>
       </header>
     </div> <!-- InstanceBeginEditable name="CentroEditRegion" -->
- <div  class="justify-content-center">
-    <img src="utls/imgs/enConstrucc.PNG" />
-  </div>  
- <div class="content " style="display: none;">  
-         
+    <div class="content " style="display: block;">         
         <div class="row" id="centro info">
-          <div class="col-4 " >
-            <div class="border rounded-lg card">
-              <div class="card-body">
-                <h5 class="card-title titulo-olivo" >Acerca de</h5>
-                <p class="card-text info-justify">
-                  “Olive Land Farms" es una finca con una extensión de 5 hectáreas (12,5 acres),
-                  enclavada en “8470” ReidRd, perteneciente al pequeño poblado de Hastings, al Norte del Estado de la
-                  Florida. Cuenta con diversas variedades de olivo cultivados por métodos ecológicos. Aquí podrás
-                  encontrar gran diversidad de plantas como palmas, cedro, pino, limonero, arce rojo, magnolias, encino
-                  entre otras, además puedes disfrutar de la presencia de animales, incluyendoel rakkún, conejos,
-                  ardillas, que adornan el paisaje. Esta finca es un rincón privilegiado en cuanto a belleza
-                  paisajística y protección medioambiental.
-                  ¡Anímate a visitarnos…No te lo pierdas!</p>                
-              </div> 
-              
-            </div>            
-          </div><!-- fin de col 4, cosa del lado -->
+          <div class="col-md-4 " >
+            <div class="row" id="body-row">
+              <!-- Sidebar -->
+              <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
+                <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+                <!-- Bootstrap List Group -->
+                <ul class="list-group">
+                  <!-- Separator with title Articulos-->
+                  <li
+                    class="titulo-olivo list-group-item sidebar-separator-title d-flex align-items-center menu-collapsed">
+                    <h4>Actividades "Olive's"</h4>
+                  </li>
+                  <a href="#producto"
+                    class="bg-olive list-group-item list-group-item-action flex-column align-items-start"
+                    onclick="cambioProdcc('visit');">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                      <span class="menu-bold"> Visitas guiadas</span>
+                    </div>
+                  </a>                  
+                  <a href="#producto" class="bg-olive list-group-item list-group-item-action"
+                    onclick="cambioProdcc('trab');">
+                    <div class="d-flex justify-content-start ">
+                      <span class="menu-bold">Zona "Trabajo"</span>
+                    </div>
+                  </a>
+                  <!--Fin de Separator with title Salsas-->
+                </ul><!-- fin Bootstrap List Group -->
+              </div><!-- sidebar-container END -->
+  
+            </div><!-- body-row END -->            
+          </div><!-- fin de col md 4, cosa del lado -->
           <!-- fotos de la finca -->
           <div class="col-8 border rounded-lg" >
+          <!-- aqui es algo -->
+
+          <div id="producto"class="row container-fluid">
+            <div id="producto-cabeza" class="pt-4 bg-success text-white justify-content-center">              
+              <h3 id="cabeza-otros">
+              </h3>
+            </div><!-- div fin producto-cabeza -->
+
+
           <!-- aqui es algo -->
           <div class="p-2 d-flex justify-content-center">
             <div class="ecommerce-gallery"  >
               <div class="row" id="galeria">                
-                    <img src="utls/imgs/IMG-05.jpg" id="galeriaImg" alt="Olive Farm" class="imagenScala80 " >                    
+                    <img src="" id="galeriaImg" alt="Olive Farm" class="imagenScala " >                    
               </div><!-- row fin de mostrar -->
               <!-- seccion de thumbs -->
             <div id="thumbsSeccion" class="row justify-content-center">
-              <img src="utls/imgs/IMG-05.jpg" alt="ads" class="imagenScala20 active" id="05" onclick="mostrarEnCarrusel('05');">
-              <img src="utls/imgs/IMG-06.jpg" alt="asda" class="imagenScala20" id="06" onclick="mostrarEnCarrusel('06');">
-              <img src="utls/imgs/IMG-10.jpg" alt="asda" class="imagenScala20" id="10" onclick="mostrarEnCarrusel('10');">
-              <img src="utls/imgs/IMG-21.jpg" alt="ads" class="imagenScala20 " id="21" onclick="mostrarEnCarrusel('21');">
-              <img src="utls/imgs/IMG-22.jpg" alt="asda" class="imagenScala20" id="22" onclick="mostrarEnCarrusel('22');">
-              <img src="utls/imgs/IMG-39.jpg" alt="asda" class="imagenScala20" id="39" onclick="mostrarEnCarrusel('39');">
-              <img src="utls/imgs/IMG-41.jpg" alt="ads" class="imagenScala20 " id="41" onclick="mostrarEnCarrusel('41');">
-              <img src="utls/imgs/IMG-42.jpg" alt="asda" class="imagenScala20" id="42" onclick="mostrarEnCarrusel('42');">
-              <img src="utls/imgs/IMG-47.jpg" alt="asda" class="imagenScala20" id="47" onclick="mostrarEnCarrusel('47');">
+              
             </div>
             <!-- fin de seccion de thumbs -->
             </div>    
@@ -173,7 +184,7 @@
 </body>
 <script type="text/javascript" src="utls/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="utls/js/funcs.js"></script>
-
+<script type="text/javascript" src="utls/dts/data.js"></script>
 <!-- InstanceEnd -->
 
 </html>
