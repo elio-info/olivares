@@ -55,27 +55,51 @@ let prod_vino=[
     }
 ]
 
-let prodactv_trabj=[
+let prodactv=[
     { 
         "fotos": ['trab-01','trab-02','trab-03','trab-04','trab-05','trab-06','trab-07','trab-08'],
-        "ofrece":"Un lugar de para&iacute;so, donde tambi&eacute;n se trabaja..."
+        "ofrece":'Se le darán tareas sencillas para que experimente el proceso de trabajar en una finca y entiendan el valor que tiene este trabajo. Realizaran actividades como quitar malas hierbas a los cultivos, dar de comer a los animales, cepillarlos, incluso pueden jugar con ellos. Un lugar de para&iacute;so, donde tambi&eacute;n se trabaja...',
+        'nomb':"Trabajo en la finca "
     }
-]
-let prodactv_visita=[
+,
     { 
         "fotos": ['vst-01','vst-02','vst-03','vst-04','vst-05','vst-06','vst-07','vst-08','vst-09'],
-        "ofrece":"Para&iacute;so de visita, donde tambi&eacute;n se relaja..."
+         "ofrece":'Podrá recorrer toda la finca y recibirá una explicación del proceso productivo de la misma, desde las plantas que se cultivan y la finalidad de las mismas hasta los animales que viven en ella y como es su vida.Para&iacute;so de visita, donde tambi&eacute;n se relaja...',
+        'nomb':"Visitas Guiadas "
     }
+    ,   { 
+        "fotos": [],
+        "ofrece":'Se le proporcionara una canasta en la cual va a recoger frutas y verduras las cuales van a utilizar en una merienda o picnic, solo van a recolectar la cantidad suficiente para comer y se les hablara del desarrollo sostenible.',
+        'nomb':"Recogida de frutas y verduras "
+    }
+,
+    { 
+        "fotos": [],
+         "ofrece":'Se ofrecen actividades educativas para ampliar el conocimiento de los visitantes en temas como el cuidado de animales, sostenibilidad y desarrollo sostenible, agricultura ecológica, como el cambio climático ha afectado la zona y talleres de cocina.',
+        'nomb':"Actividades educativas "
+    }
+    ,
+    { 
+        "fotos": [],
+        "ofrece":'Los visitantes disfrutaran de paseos a caballo, degustación de alimentos y bebidas típicas, observación de estrellas, entre otras opciones.',
+        'nomb':"Turismo Rural"
+    }
+
 ]
+
+function delAllElmts(params) {
+    while (params.firstChild) {
+        // The list is LIVE so it will re-index each call
+        params.removeChild(params.firstChild);
+      }
+}
+
 function llenarProdcc(data,root) {
     let prod_fotos=data.fotos,
         ponerCarousel=document.getElementById('thumbsSeccion')
     // llenar las imagenes
     // 1-vaciar
-    while (ponerCarousel.firstChild) {
-        // The list is LIVE so it will re-index each call
-        ponerCarousel.removeChild(ponerCarousel.firstChild);
-      }
+    delAllElmts(ponerCarousel)
     // llenar el trip
     prod_fotos.map(e =>{
         let imgVinc=document.createElement('img'),
@@ -143,17 +167,43 @@ function cambioProdcc(params) {
             break;
             case 'visit':
             // otros
-            document.getElementById('cabeza-otros').innerHTML=prodactv_visita[0].ofrece
+            document.getElementById('cabeza-otros').innerHTML=prodactv[1].nomb
             document.getElementById('cabeza-otros').className=``
-            llenarProdcc(prodactv_visita[0],'act-visita')
+            llenarProdcc(prodactv[1],'act-visita')
             break;
         case 'trab':
-                // otros
-                document.getElementById('cabeza-otros').innerHTML=prodactv_trabj[0].ofrece
-                document.getElementById('cabeza-otros').className=`` 
-                llenarProdcc(prodactv_trabj[0],'act-trabajo')               
-                break;
+            // otros
+            document.getElementById('cabeza-otros').innerHTML=prodactv[0].nomb
+            document.getElementById('cabeza-otros').className=`` 
+            llenarProdcc(prodactv[0],'act-trabajo')               
+            break;
+        case "edu":// algo
+            document.getElementById('cabeza-otros').innerHTML=prodactv[3].nomb
+            // en construcc
+            //dentro del DIV, agrego el icono de Construcc
+            document.getElementById("ofrece").innerHTML='';
+            document.getElementById("galeriaImg").src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor
+            delAllElmts(document.getElementById('thumbsSeccion'))
+            break;
+        case "t_ru": // algo
+            document.getElementById('cabeza-otros').innerHTML=prodactv[4].nomb
+            // en construcc
+            //dentro del DIV, agrego el icono de Construcc
+            document.getElementById("ofrece").innerHTML='';
+            document.getElementById("galeriaImg").src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor
+            delAllElmts(document.getElementById('thumbsSeccion'))
+            break;   
+        case 'recog':
+            // algo
+            document.getElementById('cabeza-otros').innerHTML=prodactv[2].nomb
+            // en construcc
+            //dentro del DIV, agrego el icono de Construcc
+            document.getElementById("ofrece").innerHTML='';
+            document.getElementById("galeriaImg").src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor
+            delAllElmts(document.getElementById('thumbsSeccion'))
+            break;
         
+
     }
 }
 
