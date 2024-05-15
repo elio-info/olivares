@@ -57,9 +57,9 @@ let prod_vino=[
 
 let prodactv=[
     { 
-        "fotos": ['trab-01','trab-02','trab-03','trab-04','trab-05','trab-06','trab-07','trab-08'],
-        "ofrece":'Se le darán tareas sencillas para que experimente el proceso de trabajar en una finca y entiendan el valor que tiene este trabajo. Realizaran actividades como quitar malas hierbas a los cultivos, dar de comer a los animales, cepillarlos, incluso pueden jugar con ellos. Un lugar de para&iacute;so, donde tambi&eacute;n se trabaja...',
-        'nomb':"Trabajo en la finca "
+        'nomb':"Servicio Harvest Host",        
+        "fotos": [],
+        "ofrece":'Nuestra plataforma fácil de usar hace que el alojamiento sea fácil y requiere un tiempo mínimo, por lo que puede obtener ingresos adicionales fácilmente mientras se concentra en administrar su negocio.' 
     }
 ,
     { 
@@ -67,7 +67,13 @@ let prodactv=[
          "ofrece":'Podrá recorrer toda la finca y recibirá una explicación del proceso productivo de la misma, desde las plantas que se cultivan y la finalidad de las mismas hasta los animales que viven en ella y como es su vida.Para&iacute;so de visita, donde tambi&eacute;n se relaja...',
         'nomb':"Visitas Guiadas "
     }
-    ,   { 
+       ,
+    { 
+        "fotos": ['trab-01','trab-02','trab-03','trab-04','trab-05','trab-06','trab-07','trab-08'],
+        "ofrece":'Se le darán tareas sencillas para que experimente el proceso de trabajar en una finca y entiendan el valor que tiene este trabajo. Realizaran actividades como quitar malas hierbas a los cultivos, dar de comer a los animales, cepillarlos, incluso pueden jugar con ellos. Un lugar de para&iacute;so, donde tambi&eacute;n se trabaja...',
+        'nomb':"Trabajo en la finca "
+    }
+ ,   { 
         "fotos": [],
         "ofrece":'Se le proporcionara una canasta en la cual va a recoger frutas y verduras las cuales van a utilizar en una merienda o picnic, solo van a recolectar la cantidad suficiente para comer y se les hablara del desarrollo sostenible.',
         'nomb':"Recogida de frutas y verduras "
@@ -84,12 +90,7 @@ let prodactv=[
         "ofrece":'Los visitantes disfrutaran de paseos a caballo, degustación de alimentos y bebidas típicas, observación de estrellas, entre otras opciones.',
         'nomb':"Turismo Rural"
     }
- ,
-    { 
-        "fotos": [],
-        "ofrece":'Nuestra plataforma fácil de usar hace que el alojamiento sea fácil y requiere un tiempo mínimo, por lo que puede obtener ingresos adicionales fácilmente mientras se concentra en administrar su negocio.',
-        'nomb':"Servicio Harvest Host"
-    }
+ 
 ]
 
 function delAllElmts(params) {
@@ -99,28 +100,41 @@ function delAllElmts(params) {
       }
 }
 
+function createImg_withLink(idImg,srcLink,altImg,fncClk,clss) {
+    let imgVinc=document.createElement('img')
+            
+    imgVinc.setAttribute( 'src',srcLink)
+    imgVinc.setAttribute('id',idImg)
+    imgVinc.setAttribute('alt',altImg)
+    imgVinc.setAttribute('onclick',fncClk)
+    imgVinc.setAttribute('className',clss)
+    return imgVinc
+}
+
 function llenarProdcc(data,root) {
     let prod_fotos=data.fotos,
         ponerCarousel=document.getElementById('thumbsSeccion')
     // llenar las imagenes
     // 1-vaciar
     delAllElmts(ponerCarousel)
-    // llenar el trip
-    prod_fotos.map(e =>{
-        let imgVinc=document.createElement('img'),
-            atta="'"+e+"','"+root+"'"
-
-            imgVinc.setAttribute( 'src','utls/imgs/'+root+'/IMG-'+e+'.jpg')
-            imgVinc.setAttribute('id','e')
-            imgVinc.setAttribute('alt','ads')
-            imgVinc.setAttribute('onclick','mostrarEnCarrusel('+atta+');')
-            imgVinc.setAttribute('className',"imagenScala20")
-       
+    // llenar el trip    
+    // fotos length()
+    if (prod_fotos.length>0 ) { //tiene datos y fotos
+        prod_fotos.map(e =>{ 
+        src= 'utls/imgs/'+root+'/IMG-'+e+'.jpg' 
+        atta="'"+e+"','"+root+"'"
+        fncClk="mostrarEnCarrusel("+atta+");"
+        clss="imagenScala20"
+                
+        let imgVinc= createImg_withLink('e',src,'Old Olive',fncClk,clss)
         ponerCarousel.appendChild(imgVinc) 
-    })
-    // fotos
-    // cambiar Foto Principal
-    mostrarEnCarrusel(prod_fotos[0],root);
+        })
+        // cambiar Foto Principal
+        mostrarEnCarrusel(prod_fotos[0],root);
+    } else { //vacio
+        document.getElementById("galeriaImg").src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor            
+    }
+    
     // descripcion de ofrecemos
     document.getElementById('ofrece').innerHTML=data.ofrece
 }
@@ -170,7 +184,13 @@ function cambioProdcc(params) {
             // llenar con fotos
            llenarProdcc(prod_olive[0],'Identificadas')
             break;
-            case 'visit':
+        case 'hhost':
+            // algo
+            document.getElementById('cabeza-otros').innerHTML=prodactv[5].nomb
+            llenarProdcc(prodactv[0],'act-hhost')
+            break;            
+            
+        case 'visit':
             // otros
             document.getElementById('cabeza-otros').innerHTML=prodactv[1].nomb
             document.getElementById('cabeza-otros').className=``
@@ -180,44 +200,24 @@ function cambioProdcc(params) {
             // otros
             document.getElementById('cabeza-otros').innerHTML=prodactv[0].nomb
             document.getElementById('cabeza-otros').className=`` 
-            llenarProdcc(prodactv[0],'act-trabajo')               
+            llenarProdcc(prodactv[2],'act-trabajo')               
             break;
-        case "edu":// algo
-            document.getElementById('cabeza-otros').innerHTML=prodactv[3].nomb
-            // en construcc
-            //dentro del DIV, agrego el icono de Construcc
-            document.getElementById("ofrece").innerHTML='';
-            document.getElementById("galeriaImg").src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor
-            delAllElmts(document.getElementById('thumbsSeccion'))
-            break;
-        case "t_ru": // algo
-            document.getElementById('cabeza-otros').innerHTML=prodactv[4].nomb
-            // en construcc
-            //dentro del DIV, agrego el icono de Construcc
-            document.getElementById("ofrece").innerHTML='';
-            document.getElementById("galeriaImg").src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor
-            delAllElmts(document.getElementById('thumbsSeccion'))
-            break;   
         case 'recog':
             // algo
             document.getElementById('cabeza-otros').innerHTML=prodactv[2].nomb
-            // en construcc
-            //dentro del DIV, agrego el icono de Construcc
-            document.getElementById("ofrece").innerHTML='';
-            document.getElementById("galeriaImg").src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor
-            delAllElmts(document.getElementById('thumbsSeccion'))
+            // llenar datos
+           llenarProdcc(prodactv[3],'act-recog')
+           break;
+        case "edu":// algo
+            document.getElementById('cabeza-otros').innerHTML=prodactv[3].nomb
+            //  llenar datos
+           llenarProdcc(prodactv[4],'act-recog')
             break;
-        case 'hhost':
-            // algo
-            document.getElementById('cabeza-otros').innerHTML=prodactv[5].nomb
-            // en construcc
-            //dentro del DIV, agrego el icono de Construcc
-            document.getElementById("ofrece").innerHTML='';
-            document.getElementById("galeriaImg").src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor
-            delAllElmts(document.getElementById('thumbsSeccion'))
-            break;
-        
-
+        case "t_ru": // algo
+            document.getElementById('cabeza-otros').innerHTML=prodactv[4].nomb
+            // llenar datos
+            llenarProdcc(prodactv[5],'act-turr')
+            break;   
     }
 }
 
