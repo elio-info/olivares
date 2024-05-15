@@ -84,7 +84,12 @@ let prodactv=[
         "ofrece":'Los visitantes disfrutaran de paseos a caballo, degustación de alimentos y bebidas típicas, observación de estrellas, entre otras opciones.',
         'nomb':"Turismo Rural"
     }
-
+ ,
+    { 
+        "fotos": [],
+        "ofrece":'Nuestra plataforma fácil de usar hace que el alojamiento sea fácil y requiere un tiempo mínimo, por lo que puede obtener ingresos adicionales fácilmente mientras se concentra en administrar su negocio.',
+        'nomb':"Servicio Harvest Host"
+    }
 ]
 
 function delAllElmts(params) {
@@ -196,6 +201,15 @@ function cambioProdcc(params) {
         case 'recog':
             // algo
             document.getElementById('cabeza-otros').innerHTML=prodactv[2].nomb
+            // en construcc
+            //dentro del DIV, agrego el icono de Construcc
+            document.getElementById("ofrece").innerHTML='';
+            document.getElementById("galeriaImg").src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor
+            delAllElmts(document.getElementById('thumbsSeccion'))
+            break;
+        case 'hhost':
+            // algo
+            document.getElementById('cabeza-otros').innerHTML=prodactv[5].nomb
             // en construcc
             //dentro del DIV, agrego el icono de Construcc
             document.getElementById("ofrece").innerHTML='';
