@@ -186,7 +186,7 @@ function cambioProdcc(params) {
             break;
         case 'hhost':
             // algo
-            document.getElementById('cabeza-otros').innerHTML=prodactv[5].nomb
+            document.getElementById('cabeza-otros').innerHTML=prodactv[0].nomb
             llenarProdcc(prodactv[0],'act-hhost')
             break;            
             
@@ -198,23 +198,23 @@ function cambioProdcc(params) {
             break;
         case 'trab':
             // otros
-            document.getElementById('cabeza-otros').innerHTML=prodactv[0].nomb
+            document.getElementById('cabeza-otros').innerHTML=prodactv[2].nomb
             document.getElementById('cabeza-otros').className=`` 
             llenarProdcc(prodactv[2],'act-trabajo')               
             break;
         case 'recog':
             // algo
-            document.getElementById('cabeza-otros').innerHTML=prodactv[2].nomb
+            document.getElementById('cabeza-otros').innerHTML=prodactv[3].nomb
             // llenar datos
            llenarProdcc(prodactv[3],'act-recog')
            break;
         case "edu":// algo
-            document.getElementById('cabeza-otros').innerHTML=prodactv[3].nomb
+            document.getElementById('cabeza-otros').innerHTML=prodactv[4].nomb
             //  llenar datos
            llenarProdcc(prodactv[4],'act-recog')
             break;
         case "t_ru": // algo
-            document.getElementById('cabeza-otros').innerHTML=prodactv[4].nomb
+            document.getElementById('cabeza-otros').innerHTML=prodactv[5].nomb
             // llenar datos
             llenarProdcc(prodactv[5],'act-turr')
             break;   
