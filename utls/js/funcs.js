@@ -11,7 +11,18 @@ let ciencia_invest_art=[
     "ico":"utls/sc-inv/paper-64.ico"
 }
 ]
-
+let ciencia_invest_proy=[
+  { 
+    "nomb":"Proyecto Gestión sostenible de la granja “Olive Land Farms” para la mitigación de los efectos del cambio climático. Estudio de Caso",
+    "autor": ['Enrique Orestes Santos. Investigador independiente.',
+              'Reinaldo Hanoi Valdés Reinoso. Doctor en Ciencias Forestales.',
+              'Bertha Rita Castillo EduaDoctora en Ciencias Forestales.',
+              'Jennifer Sosa','Marta Bonilla Vichot' ,
+              'Jesús Alonso Gil'],
+    "ruta":"utls/sc-inv/proy-Olive-Land-Farms.pdf",
+    "ico":"utls/sc-inv/paper-64.ico"
+}
+]
 // ciencia e investigacion
 function cambioCiencia(params) {
   let ponerDatos=document.getElementById('producto-oferta')
@@ -24,18 +35,14 @@ function cambioCiencia(params) {
       case 'proy':
               // proys
               document.getElementById('cabeza-producto').innerHTML=' Proyectos '
-              // en construcc
-               //dentro del DIV, agrego el icono de Construcc
-              let proy_const = document.createElement("img");
-              proy_const.src = 'utls/imgs/enConstrucc.PNG';//poner icono lugar valor
-              proy_const.className = 'imageScala';//poner icono clase valor
-              document.getElementById('producto-oferta').appendChild(proy_const)
+              // llenar con fotos
+              llenarAcc(ciencia_invest_proy,'')
               break;
       default:
           // articulos
           document.getElementById('cabeza-producto').innerHTML=` Art&iacute;culos`          
           // llenar con fotos
-         llenarAcc(ciencia_invest_art,'Identificadas')
+         llenarAcc(ciencia_invest_art,'')
           break;
   }
 }

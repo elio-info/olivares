@@ -58,7 +58,7 @@ let prod_vino=[
 let prodactv=[
     { 
         'nomb':"Servicio Harvest Host",        
-        "fotos": [],
+        "fotos": ['act-hhost-04','act-hhost-02','act-hhost-03','act-hhost-01','act-hhost-05','act-hhost-06','act-hhost-07'],
         "ofrece":'Nuestra plataforma fácil de usar hace que el alojamiento sea fácil y requiere un tiempo mínimo, por lo que puede obtener ingresos adicionales fácilmente mientras se concentra en administrar su negocio.' 
     }
 ,
