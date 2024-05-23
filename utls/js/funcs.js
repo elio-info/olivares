@@ -9,6 +9,13 @@ let ciencia_invest_art=[
               'Bertha Rita Castillo EduaDoctora en Ciencias Forestales.'],
     "ruta":"utls/sc-inv/articulo-publicado-rap05124.pdf",
     "ico":"utls/sc-inv/paper-64.ico"
+},{ 
+  "nomb":"Propuesta de medidas para mitigar daños por encharcamiento en plantaciones de olivo en Olive Land Farms, Florida, EUA",
+  "autor": ['Enrique Orestes Santos. Investigador independiente.',
+            'Reinaldo Hanoi Valdés Reinoso. Doctor en Ciencias Forestales.',
+            'Bertha Rita Castillo EduaDoctora en Ciencias Forestales.'],
+  "ruta":"https://revista.itson.edu.mx/index.php/rlrn/article/view/339",
+  "ico":"utls/sc-inv/paper-64.ico"
 }
 ]
 let ciencia_invest_proy=[
