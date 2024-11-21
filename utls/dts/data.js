@@ -93,6 +93,37 @@ let prodactv=[
  
 ]
 
+let prod_inform=
+    {
+        juegos:[
+            {
+                abrev:'j_osf',    
+                nomb:"Olivares Santos Grampha's",
+                foto:"inform_osg.jpg",
+                ref:'',
+                desc:"Juego educativo, con niveles, para niños de 3 a 7 años.Ilustrativo y ameno recurso que enseña las etapas por las que se pasa en lo referente al cultivo y cosecha de los olivos, así como una vista a la obtención del aceite. Todo ambientado con imágenes de la finca."
+            },
+            {
+                abrev:'j_adolf',
+                nomb:"Arma y descubre Olive Land Farm",
+                foto:"inform_adolf.jpg",
+                ref:'',
+                desc:"Juego educativo, con niveles, para niños de 3 a 7 años.Ilustrativo y ameno recurso que enseña las etapas por las que se pasa en lo referente al cultivo y cosecha de los olivos, así como una vista a la obtención del aceite. Todo ambientado con imágenes de la finca."
+            }
+        ]
+    ,    
+        libros:[
+            {
+                abrev:'l_',
+                nomb:"Olivares Santos Grampha's",
+                foto:"inform_osg.jpg",
+                ref:'',
+                desc:"Juego educativo, con niveles, para niños de 3 a 7 años.Ilustrativo y ameno recurso que enseña las etapas por las que se pasa en lo referente al cultivo y cosecha de los olivos, así como una vista a la obtención del aceite. Todo ambientado con imágenes de la finca."
+            }
+        ]
+    }
+
+
 function delAllElmts(params) {
     while (params.firstChild) {
         // The list is LIVE so it will re-index each call
@@ -218,6 +249,26 @@ function cambioProdcc(params) {
             // llenar datos
             llenarProdcc(prodactv[5],'act-turr')
             break;   
-    }
+    }     
 }
 
+ function cambioProdccInf(prod ){
+      switch(prod[0]){
+        case 'j':
+            let toca=null
+            prod_inform.juegos.map(elt=>{ 
+                if (elt.abrev==prod)
+                    toca=elt                    
+                } ) 
+                // nombre
+            document.getElementById('cabeza-olivo').innerHTML=toca.nomb
+            // foto
+            document.getElementById('galeriaImg').src= "utls/imgs/inform/"+toca.foto
+                // desc
+                document.getElementById('ofrece').innerHTML=toca.desc
+                // vin
+                document.getElementById('referenc').href= toca.vinc
+                break;
+            break;
+      }
+    }
