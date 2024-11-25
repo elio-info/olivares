@@ -106,7 +106,7 @@ let prod_inform=
             {
                 abrev:'j_adolf',
                 nomb:"Arma y descubre Olive Land Farm",
-                foto:"inform_adolf.jpg",
+                foto:"j_adolf.jpg",
                 ref:'',
                 desc:"Juego educativo, con niveles, para niños de 3 a 7 años.Ilustrativo y ameno recurso que enseña las etapas por las que se pasa en lo referente al cultivo y cosecha de los olivos, así como una vista a la obtención del aceite. Todo ambientado con imágenes de la finca."
             }
@@ -119,6 +119,13 @@ let prod_inform=
                 foto:"l_diolf.jpg",
                 ref:'https://www.amazon.com/Dreams-Olive-Land-Farms-Anthology-ebook/dp/B0D9R3T1PK',
                 desc:`Dreams in Olive Land Farms: An Anthology of Children's Stories" is a work that intertwines the enchanting stories of "Olive Land Farms" and its inhabitants. Written by Reinaldo Hanoi Valdes Reinoso, Ph.D., and Bertha Rita Castillo, Edua, Ph.D. It transports the reader to an enchanting world where olive trees reign supreme and wisdom is passed down from generation to generation. `
+            },
+            {
+                abrev:'l_pmmd',
+                nomb:`Propuesta de medidas para mitigar daños: Por encharcamiento en plantaciones de olivo en la granja "Olive Land Farms" (Spanish Edition)`,
+                foto:"l_pmmd.jpg",
+                ref:'https://www.amazon.com/-/es/Reinaldo-Hanoi-Valdes-Reinoso/dp/6139405858',
+                desc:`El cultivo de olivo ha demostrado resistencia a cambios en algunas variables climáticas, es capaz de obtener producciones satisfactorias en circunstancias edafoclimáticas, paisajísticas y de manejo relativamente adversas. La presente investigación tiene el propósito de proponer medidas para el manejo del olivo en condiciones de encharcamiento en “Olive Land Farms” ubicada en el estado La Florida. `
             }
         ]
     }
@@ -268,10 +275,9 @@ function cambioProdcc(params) {
                 // desc
                 document.getElementById('ofrece').innerHTML=toca.desc
                 // vin
-                document.getElementById('referenc').href= toca.vinc
-                break;
-            break;
-            case 'l':            
+                document.getElementById('referenc').href= toca.ref
+        break;
+        case 'l':            
             prod_inform.libros.map(elt=>{ 
                 if (elt.abrev==prod)
                     toca=elt              
@@ -283,8 +289,8 @@ function cambioProdcc(params) {
                 // desc
                 document.getElementById('ofrece').innerHTML=toca.desc
                 // vin
-                document.getElementById('referenc').href= toca.vinc
-                break;
-            break;
+                document.getElementById('referenc').href= toca.ref
+        break;
+            
       }
     }
